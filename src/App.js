@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import DisplayEntries from './Components/DisplayEntries/DisplayEntries';
-import AddEntryForm from './Components/AddEntry/AddEntryForm';
+import DisplayPosts from './Components/DisplayPosts/DisplayPosts';
+import CreatePost from './Components/CreatePost/CreatePost';
 import './App.css'
 
 
@@ -8,7 +8,7 @@ function App() {
 
   const [entries, setEntries] = useState([])
 
-  function addNewEntry(entry){
+  function NewPost(entry){
     let tempEntries = [...entries, entry];
 
     setEntries(tempEntries)
@@ -20,10 +20,10 @@ function App() {
         <h3 style={{margin: '1em'}}>Social<small className='text-muted'>Feed</small></h3>
         <div className='col-md-6'>
           <div className='border-box'>
-              <AddEntryForm addNewEntryProperty={addNewEntry} />
+              <CreatePost addNewPost={NewPost} />
           </div>
           <div className='border-box'>
-              <DisplayEntries parentEntries={entries} />
+              <DisplayPosts parentEntries={entries} />
           </div>
         </div>
       </div>
