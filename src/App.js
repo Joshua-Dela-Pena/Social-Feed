@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DisplayPosts from './Components/DisplayPosts/DisplayPosts';
 import CreatePost from './Components/CreatePost/CreatePost';
+import LikesDislikes from './Components/LikesDislikes/LikesDislikes';
 import './App.css'
 
 
@@ -23,8 +24,9 @@ function App() {
               <CreatePost addNewPost={NewPost} />
           </div>
           <div className='border-box'>
-              <DisplayPosts parentEntries={entries} />
+              <DisplayPosts parentEntries={entries}/>
           </div>
+          
         </div>
       </div>
     </div>

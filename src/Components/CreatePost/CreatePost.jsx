@@ -7,7 +7,6 @@ const CreatePost = (props) => {
     const [post, setPost] = useState('');
 
     function handleSubmit(event){
-        debugger;
         event.preventDefault();
         let newEntry = {
             name: name,
@@ -27,7 +26,7 @@ const CreatePost = (props) => {
                 <label for='Post'>Post</label>
                 <textarea id='Posts' name="Posts" className='form-control'value={post} onChange={(event) => setPost(event.target.value)}></textarea>
             </div>
-                <button type='submit' className='btn-primary' style={{'margin-top': '1em'}}>Add Comment</button>
+                <button type='submit' className='btn-primary' style={{'margin-top': '1em'}}>Share</button>
         </form>
      );
 }
