@@ -1,5 +1,5 @@
 import LikesDislikes from "../LikesDislikes/LikesDislikes";
-
+import "./DisplayPosts.css"
 const DisplayPosts = (props) => {
     return ( 
         <table className="text" className="table">
@@ -7,10 +7,10 @@ const DisplayPosts = (props) => {
          {props.parentEntries.map((entry) => {
            return (
              <tr> 
-             <td><b><i>{entry.name}</i></b></td><tr>
+             <td className="move"><b><i>{entry.name}</i></b></td><tr>
              </tr>
-             <td>{entry.post}</td>
-             <td><LikesDislikes /></td>
+             <td className="moveAsWell"> -  ~ {entry.post} ~ </td>
+             <LikesDislikes />
              </tr>
             );
          })}
